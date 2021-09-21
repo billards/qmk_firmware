@@ -15,31 +15,23 @@
  */
 #include QMK_KEYBOARD_H
 
-enum {
-    TD_EQUALS_BKSP
-};
-
-qk_tap_dance_action_t tap_dance_actions[] = {
-    [TD_EQUALS_BKSP] = ACTION_TAP_DANCE_DOUBLE(KC_EQL, KC_BSPACE)
-};
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	/*		NUMPAD LAYER
     /-----------------------------------------------------`
-    |             |    7    |    8    |    9    |    +    |
+    |             |    7    |    8    |    9    |    /    |
     |             |---------|---------|---------|---------|
-    |             |    4    |    5    |    6    |    -    |
+    |             |    4    |    5    |    6    |    *    |
     |             |---------|---------|---------|---------|
-    |             |    1    |    2    |    3    |    *    |
+    |             |    1    |    2    |    3    |    -    |
     |-------------|---------|---------|---------|---------|
-    |      =      |    0    |    L    |    .    |    /    |
+    |     =/L     |    0    |    .    |   BKSP  |    +    |
     \-----------------------------------------------------'
 	*/
     [0] = LAYOUT(
-						KC_7,	KC_8,	KC_9,    		KC_KP_PLUS,
-						KC_4,	KC_5,	KC_6,    		KC_KP_MINUS,
-						KC_1,	KC_2,	KC_3,    		KC_KP_ASTERISK,
-	TD(TD_EQUALS_BKSP),	KC_0,	MO(2),	LSFT_T(KC_DOT),	KC_KP_SLASH
+					KC_7,	KC_8,	KC_9,   	KC_KP_SLASH,
+					KC_4,	KC_5,	KC_6,   	KC_KP_ASTERISK,
+					KC_1,	KC_2,	KC_3,		KC_KP_MINUS,
+	LT(2, KC_EQL),	KC_0,	KC_DOT,	KC_BSPACE,	KC_KP_PLUS
     ),
     /*
             BASE LAYER
