@@ -39,3 +39,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* Bootmagic - hold down rotary encoder pushbutton while plugging in to enter bootloader */
 #define BOOTMAGIC_LITE_ROW 3
 #define BOOTMAGIC_LITE_COLUMN 0
+
+#define RGB_DI_PIN B3
+#define RGBLED_NUM 1
+#define TAPPING_TERM 150
