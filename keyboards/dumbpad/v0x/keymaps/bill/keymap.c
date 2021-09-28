@@ -79,9 +79,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /*
             SUB LAYER
     /-----------------------------------------------------`
-    |             |    1    |    2    |    3    |   4   |
+    |             |    1    |    2    |    3    |    4    |
     |             |---------|---------|---------|---------|
-    |             |    Q    |    W    |    E    |    R    |
+    |             |    Q    |    W    |    E    | R/SHIFT |
     |             |---------|---------|---------|---------|
     |             |    A    |    S    |    D    |    F    |
     |-------------|---------|---------|---------|---------|
@@ -89,28 +89,28 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     \-----------------------------------------------------'
     */
     [3] = LAYOUT(
-							KC_1,	KC_2,	KC_3,	KC_4,
-							KC_Q,	KC_W,	KC_E,   KC_R,
-							KC_A,	KC_S,	KC_D,   KC_F,
-        LT(4, KC_ESCAPE),	KC_Z,	KC_X,	KC_C,   KC_SPACE
+				KC_1,	KC_2,	KC_3,	KC_4,
+				KC_Q,	KC_W,	KC_E,   LSFT_T(KC_R),
+				KC_A,	KC_S,	KC_D,   KC_F,
+        MO(4),	KC_Z,	KC_X,	KC_C,   KC_SPACE
     ),
     /*
             SUB LAYER
     /-----------------------------------------------------`
-    |             |    5    |    6    |    7    |  P/ALT  |
+    |             |    5    |    6    |  P/ALT  |   ESC   |
     |             |---------|---------|---------|---------|
     |             |   TAB   |    T    |    I    |    O    |
     |             |---------|---------|---------|---------|
-    |             | G/SHIFT |    H    |    J    |    L    |
+    |             |    G    |    H    |    J    |    L    |
     |-------------|---------|---------|---------|---------|
     |             |    V    |    B    |    N    |  M/CTRL |	
     \-----------------------------------------------------'
     */
     [4] = LAYOUT(
-                    KC_5,     		KC_6,	KC_7,	LALT_T(KC_P),
-                    KC_TAB,    		KC_T,	KC_I,	KC_O,
-                    LSFT_T(KC_G),	KC_H,	KC_J,	KC_L,
-        _______,    KC_V,       	KC_B,	KC_N,	LCTL_T(KC_M)
+                    KC_5,	KC_6,	LALT_T(KC_P),	KC_ESCAPE,
+                    KC_TAB,	KC_T,	KC_I,			KC_O,
+                    KC_G,	KC_H,	KC_J,			KC_L,
+        _______,    KC_V,   KC_B,	KC_N,			LCTL_T(KC_M)
     )
 };
 
